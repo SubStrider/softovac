@@ -1,0 +1,29 @@
+nav#offcanvas.navmenu.navmenu-default.navmenu-fixed-left.offcanvas(role='navigation')
+  a.navmenu-brand(href='#') Brand
+  ul.nav.navmenu-nav
+    li
+      a(href="#") Home
+    li
+      a(href="#") Blog
+    li
+      a(href="#") Something Else
+.navbar.navbar-default.chameleon-bar.navbar-fixed-top
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.pull-left.collapsed(type='button', data-toggle='offcanvas' data-target='#offcanvas' data-canvas='body')
+            span.sr-only Toggle navigation
+            i.fa.fa-bars.fa-lg
+          a.navbar-brand(href='#')
+            img.logo-light(alt='Softovac', src='images/softovac-light.png', srcset='images/softovac-light.png 1x, images/softovac-light@2x.png 2x, images/softovac-light@3x.png 3x')
+            img.logo-dark(alt='Softovac', src='images/softovac-dark.png', srcset='images/softovac-dark.png 1x, images/softovac-dark@2x.png 2x, images/softovac-dark@3x.png 3x')
+          // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#') Link 
+            li
+              a(href='#') Link
+            button.btn.btn-default.btn-success.navbar-btn(type='button') 
+              i.fa.fa-shopping-bag
+              | Buy Now

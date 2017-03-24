@@ -1,0 +1,411 @@
+@icon-font-path: '../fonts/';
+@fa-font-path: '../fonts/';
+// bower:less
+@import "bower_components/bootstrap-less/less/bootstrap.less";
+@import "bower_components/slick-carousel/slick/slick.less";
+@import "bower_components/font-awesome/less/font-awesome.less";
+@import "bower_components/animate.less/animate.less";
+@import "bower_components/jasny-bootstrap/less/jasny-bootstrap.less";
+// endbower
+
+/** Configuration */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,600");
+
+@font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+@headings-font-family:    "Montserrat", Helvetica, Arial, sans-serif;
+@headings-font-weight:    700;
+@headings-line-height:    1.1;
+@headings-color:          #7aa65d;
+@tatti-yellow:            #eccd63;
+
+/** End Configuration */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* Space out content a bit */
+
+body {
+    // padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a {
+    color: #222;
+    &:hover,
+    &:focus {
+        color: @headings-color;
+        transition: color 0.2s;
+        text-decoration: none;
+    }
+}
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Custom page header */
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+}
+
+
+/* Custom page footer */
+
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+
+/* Main marketing message and sign up button */
+
+.jumbotron {
+    // text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    .btn {
+        font-size: 21px;
+        margin-right: 8px;
+        padding: 12px 24px;
+    }
+}
+
+
+/* Supporting marketing content */
+
+.marketing {
+    margin: 40px 0;
+    p + h4 {
+        margin-top: 28px;
+    }
+}
+
+
+/* Responsive: Portrait tablets and up */
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+
+/**
+ *  Custom Code Starts here
+ */
+
+.navbar-default {
+    &.chameleon-bar {
+        background: transparent;
+        border-bottom: none;
+        .container-fluid {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .navbar-btn {
+            i {
+                margin-right: 4px;
+            }
+        }
+        .navbar-brand {
+            padding: 8px 15px;
+        }
+        .navbar-toggle{
+            margin-left: -15px;
+            background: transparent;
+            color:#fff;
+            height: 40px;
+            width: 40px;
+            border-radius:50%;
+            border:1px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+            .animated
+        }
+    }
+}
+
+.scrolled {
+    background: white!important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2)!important;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in;
+}
+
+.jumbotron {
+    &.hero {
+        padding-top: 180px;
+        height: 532px;
+        h1 {
+            margin-bottom: 32px;
+        }
+        background-color: #ECCD63;
+        background-image: url(../images/jhakaas.png);
+        background-repeat:no-repeat;
+        background-size: 1100px;
+        background-position: 300px 10px;
+    }
+    &.last {
+        h3 {
+            color: @tatti-yellow;
+        }
+        .lead {
+            color: white;
+        }
+        margin-bottom: 0;
+        background: linear-gradient(180deg, #222, #666);
+        // url(../images/quiz.jpg);
+        background-repeat:no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+    &.factron {
+        color: white;
+        h3 {
+            color: @tatti-yellow;
+        }
+        h4,
+        p {
+            color: white;
+        }
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), darken(@headings-color, 20%)),
+        url(../images/tips.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        .media {
+            margin-top: 32px;
+            .media-left {
+                a {
+                    color: white;
+                    display: inline-block;
+                    height: 48px;
+                    width: 48px;
+                    background-color: darken(@tatti-yellow, 10%);
+                }
+            }
+        }
+    }
+}
+
+img {
+    &.rounded {
+        border-radius: 50%;
+        border: 2px solid #ccc;
+    }
+    &.logo-light,
+    &.logo-dark {
+        height: 36px;
+    }
+    &.lupin-logo {
+        height: 200px;
+    }
+}
+
+a.social-link {
+    color: #444;
+    text-decoration: none;
+    display: inline;
+    padding: 12px 24px;
+    vertical-align: middle;
+    i.fa-2x {
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+    &:hover,
+    &:focus {
+        color: @headings-color;
+        transition: color 0.2s;
+    }
+}
+
+#video {
+    height: 450px;
+    width: 800px;
+    background: #222;
+}
+
+
+/** Gauge */
+
+.gauge-wrap {
+    position: relative;
+    margin: 0 0 20px;
+    width: 250px;
+    height: 150px;
+}
+
+.gauge-core {
+    position: relative;
+    overflow: hidden;
+    height: inherit;
+    width: inherit;
+}
+
+.gauge-wrap-before {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    bottom: -7px;
+    /* 1px less to cover clipping */
+    left: 3px;
+    clip: rect(0, 16px, 16px, 0px);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.gauge-wrap-after {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    bottom: -7px;
+    /* 1px less to cover clipping */
+    right: 3px;
+    clip: rect(8px, 16px, 16px, 0px);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.gauge-bg {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+    border-radius: 125px;
+    z-index: 0;
+}
+
+.gauge-active-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+    border-radius: 125px;
+}
+
+.gauge-active {
+    top: 125px;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    overflow: visible;
+    -webkit-border-radius: 0px 0px 200px 200px;
+    -moz-border-radius: 0px 0px 200px 200px;
+    border-radius: 0px 0px 200px 200px;
+    z-index: 1;
+}
+
+.gauge-active-before {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: inherit;
+    top: -7px;
+    /* 1px less to cover clipping */
+    left: 0px;
+    clip: rect(0px, 16px, 8px, 0px);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.gauge-cap {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 218px;
+    height: 218px;
+    -webkit-border-radius: 109px;
+    -moz-border-radius: 109px;
+    border-radius: 109px;
+    background: linear-gradient(180deg, #444, #555);
+    z-index: 5;
+    .indicator {
+        width: 10px;
+        border-radius: 5px;
+        height: 100px;
+        top: 129px; //Added 20 to keep the pointer center dot in play
+        left: 109px;
+        position: absolute;
+        background: lighten(@tatti-yellow, 20%);
+        transform: rotate(0deg);
+        transform-origin: 0 0;
+        transition: all 0.2s ease-in;
+    }
+}
+
+.box {
+    float: left;
+    padding: 20px;
+    width: 250px;
+}
+
+
+/** Gauge End */
