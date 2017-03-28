@@ -40,7 +40,7 @@ $(function() {
         arrows: false,
         mobileFirst: true
     }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-        $('.hero').css('background-image', 'url(../images/slider/' + nextSlide + '.jpg)');
+        $('.hero').css('background-image', 'url(images/slider/' + nextSlide + '.jpg)');
         if(nextSlide === 2){
             $('.sub').css('color', 'white');
         } else {
