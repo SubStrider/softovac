@@ -22,7 +22,7 @@ Once the dependencies are installed
 If this remains a SPA, add new views in app/views folder using Pug templates
 
 ## Contributing
-Additions to the code base will be done with the help of proper versioning, use of bug / feature branches as mentioned [here](//nvie.com/posts/a-successful-git-branching-model/). Updates / revisions can be seen [here](CHANGELOG.mg)
+Additions to the code base will be done with the help of proper versioning, use of bug / feature branches as mentioned [here](//nvie.com/posts/a-successful-git-branching-model/). Updates / revisions can be seen [here](CHANGELOG.md)
 
 Only when a build passes, the dev shall send a coverage report and create a pull request.
 
