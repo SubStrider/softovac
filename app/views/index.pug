@@ -1,22 +1,11 @@
 extends layout
 
 block content
-  .jumbotron.hero
-    .container
-      .row
-        .col-xs-12.col-md-8
-          h1 Your only solution when the going gets tough
-          p
-            a.btn.btn-lg.btn-success(href='#') Buy Now
-            a.btn.btn-lg.btn-default.hidden-xs(href='#') Get Your Gut Score
-  .container
-    .row.marketing
-      .col-lg-6.col-xs-12
-        img.center-block(src='images/dabba.png', srcset='images/dabba.png 1x, images/dabba@2x.png 2x, images/dabba@3x.png 3x', alt='Softovac main container')
-      .col-lg-6.col-xs-12
-        h3 Some Marketing Heading
-        p.lead
-          | Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.
+
+  include partials/slider
+
+  include partials/description
+
   .jumbotron.factron
     .container
       .row
@@ -72,33 +61,38 @@ block content
           br
           br
           button.btn.btn-success.btn-lg Check It Now
-  .container
+  .container#lupin
     .row.marketing
       .col-lg-6.col-xs-12
-        h3 Second Marketing Heading
-        p.lead
-          | Recognition can be illustrated by two individuals entering a crowded room at a party. Both walk to the far side of the room, one of them slips through the crowd easily and unnoticed as they reach the far side.
+        h3 About Lupin
+        p
+          | Against the backdrop of international pharmaceutical advancement, Lupin Limited rose to global supremacy in areas of Anti-TB, Cephalosporins (anti-infectives) and Cardiovascular drugs (ACE-inhibitors and cholesterol reducing agents). It set the ball rolling with a leading-edge research centre in Pune. 
+        br
+        p
+          | Bearing an eminent presence in key segments of Diabetes, Anti-inflammatory and Respiratory Therapy, Lupin’s research drills concluded in considerable success in its New Chemical Entity program. The fastest growing pharma giant's pan India footprint is its commitment to deliver high-quality, branded and generic medications trusted by healthcare professionals and patients round the globe.
+
       .col-lg-6.col-xs-12
         img.lupin-logo.center-block(src='images/lupin-logo.png', srcset='images/lupin-logo.png, images/lupin-logo@2x.png 2x, images/lupin-logo@3x.png 3x', alt='Lupin Pharma')
     .row
-      .col-lg-12.col-xs-12
+      .col-md-10.col-md-offset-1.col-lg-10.col-xs-12
         .embed-responsive.embed-responsive-16by9
-          iframe#video.embed-responsive-item(src='http://placehold.it/700x400/444/ECCD63?text=video+goes+here')
-    .row.marketing
-      .col-lg-6.col-xs-12
+          iframe.embed-responsive-item(src='https://www.youtube-nocookie.com/embed/OVMRbYFKJ30?rel=0&amp;controls=0',allowfullscreen)
+    hr
+    .row.marketing.opinion
+      .col-lg-12.col-xs-12.text-center
         h2 Professional Opinion - A OK.
-      .col-lg-6.col-xs-12
-        blockquote.blockquote-reverse
+      .col-md-6.col-md-offset-3.col-xs-12
+        p.lead.text-center
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        .media
+        .media.text-center
             .media-left
               a(href='#')
-                img.media-object.rounded(src='http://placehold.it/64x64/fef200', alt='Profile Picture')
+                img.media-object.rounded.center-block(src='http://placehold.it/64x64/fef200', alt='Profile Picture')
             .media-body
               h5.media-heading Dr. Chris Munnar
               | Practicing Pediatrician, Piles Clinic
   .jumbotron.last
-    .container
+    .container#gut-health
       .row.marketing
         .col-xs-12.col-lg-5.col-lg-offset-1
           .box
@@ -106,5 +100,5 @@ block content
         .col-xs-12.col-lg-5
           h3 Calculate Your Gut Score
           p.lead
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          button.btn.btn-success.btn-lg Get Your Score
+            | Our lifestyles shape our digestive health. We're affected either by anxiety, insomnia, digestive disorders or graver complications to the extent of cancer. Before your gut falls in the health dungeons, test it with our short quiz to restore it to optimal health.
+          button.btn.btn-success.btn-lg Get Your Gut Health Score

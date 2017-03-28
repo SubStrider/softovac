@@ -7,9 +7,8 @@ To get started with this project, you will need the following pre-requisites:
 
 1. NodeJS & NPM (latest version of both) for package & dependency management
 2. Install bower using `npm install -g bower` for client side libraries
-3. The `cg-angular` generator to scaffold and add new modules to the project
-4. Gulp to add-on and build the project [Read More](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
-5. Install the project dependencies by cloning this repo & running `npm install & bower install`
+3. Gulp to add-on and build the project [Read More](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+4. Install the project dependencies by cloning this repo & running `npm install & bower install`
 
 ## Running the Project
 Once the dependencies are installed
@@ -23,7 +22,7 @@ Once the dependencies are installed
 If this remains a SPA, add new views in app/views folder using Pug templates
 
 ## Contributing
-Additions to the code base will be done with the help of proper versioning, use of bug / feature branches as mentioned [here](//nvie.com/posts/a-successful-git-branching-model/)
+Additions to the code base will be done with the help of proper versioning, use of bug / feature branches as mentioned [here](//nvie.com/posts/a-successful-git-branching-model/). Updates / revisions can be seen [here](CHANGELOG.mg)
 
 Only when a build passes, the dev shall send a coverage report and create a pull request.
 

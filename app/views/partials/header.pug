@@ -1,12 +1,16 @@
 nav#offcanvas.navmenu.navmenu-default.navmenu-fixed-left.offcanvas(role='navigation')
-  a.navmenu-brand(href='#') Brand
+  a.navmenu-brand(href='#')
+    img.logo-dark(alt='Softovac', src='images/softovac-dark.png', srcset='images/softovac-dark.png 1x, images/softovac-dark@2x.png 2x, images/softovac-dark@3x.png 3x')
   ul.nav.navmenu-nav
     li
-      a(href="#") Home
+      a(href='#softovac') Softovac 
     li
-      a(href="#") Blog
+      a(href='#lupin') Company
     li
-      a(href="#") Something Else
+      a(href='#gut-health') Gut Health
+  button.btn.btn-lg.btn-success(type='button') 
+    i.fa.fa-shopping-bag
+    | Buy Now
 .navbar.navbar-default.chameleon-bar.navbar-fixed-top
       .container-fluid
         // Brand and toggle get grouped for better mobile display
@@ -21,9 +25,11 @@ nav#offcanvas.navmenu.navmenu-default.navmenu-fixed-left.offcanvas(role='navigat
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             li
-              a(href='#') Link 
+              a(href='#softovac') Softovac 
             li
-              a(href='#') Link
-            button.btn.btn-default.btn-success.navbar-btn(type='button') 
+              a(href='#lupin') Company
+            li
+              a(href='#gut-health') Gut Health
+            button.btn.btn-success.navbar-btn(type='button') 
               i.fa.fa-shopping-bag
               | Buy Now
