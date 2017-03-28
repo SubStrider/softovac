@@ -20,15 +20,14 @@ html.no-js(lang='')
     // build:js scripts/vendor/modernizr.js
     script(src='../bower_components/modernizr/modernizr.js')
     // endbuild
-  body
+  body.dark
     <!--[if lt IE 10]>
       p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     <![endif]-->
-    include partials/header
 
     block content
 
-    include partials/footer
+    //- include partials/footer
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.
@@ -47,18 +46,18 @@ html.no-js(lang='')
     // endbuild
 
     // build:js scripts/plugins.js
-    script(src='../bower_components/bootstrap/js/affix.js')
-    script(src='../bower_components/bootstrap/js/alert.js')
-    script(src='../bower_components/bootstrap/js/dropdown.js')
-    script(src='../bower_components/bootstrap/js/tooltip.js')
-    script(src='../bower_components/bootstrap/js/modal.js')
-    script(src='../bower_components/bootstrap/js/transition.js')
-    script(src='../bower_components/bootstrap/js/button.js')
-    script(src='../bower_components/bootstrap/js/popover.js')
-    script(src='../bower_components/bootstrap/js/carousel.js')
-    script(src='../bower_components/bootstrap/js/scrollspy.js')
-    script(src='../bower_components/bootstrap/js/collapse.js')
-    script(src='../bower_components/bootstrap/js/tab.js')
+    script(src='../bower_components/bootstrap-less/js/affix.js')
+    script(src='../bower_components/bootstrap-less/js/alert.js')
+    script(src='../bower_components/bootstrap-less/js/dropdown.js')
+    script(src='../bower_components/bootstrap-less/js/tooltip.js')
+    script(src='../bower_components/bootstrap-less/js/modal.js')
+    script(src='../bower_components/bootstrap-less/js/transition.js')
+    script(src='../bower_components/bootstrap-less/js/button.js')
+    script(src='../bower_components/bootstrap-less/js/popover.js')
+    script(src='../bower_components/bootstrap-less/js/carousel.js')
+    script(src='../bower_components/bootstrap-less/js/scrollspy.js')
+    script(src='../bower_components/bootstrap-less/js/collapse.js')
+    script(src='../bower_components/bootstrap-less/js/tab.js')
     script(src='../bower_components/jasny-bootstrap/js/offcanvas.js')
     script(src='scripts/gauge.js')
     script(src='../bower_components/slick-carousel/slick/slick.js')

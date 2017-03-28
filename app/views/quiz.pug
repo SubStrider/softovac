@@ -1,0 +1,193 @@
+extends darklayout
+
+block content
+	.container
+		.row
+			.col-xs-12
+				a(href='index.html')
+					img.center-block(alt='Softovac', src='images/softovac-light.png', srcset='images/softovac-light.png 1x, images/softovac-light@2x.png 2x, images/softovac-light@3x.png 3x')
+				br
+	.row
+		.col-md-6.col-md-offset-3
+			h3.text-center How Good is Your Gut?
+			br
+			.panel.panel-default#age
+				.panel-body.text-center
+					h4 What is your age?
+					br
+					div.age(data-toggle='buttons')
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='12',name='age')
+							| 12 - 18 Years
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='18',name='age')
+							| 18 - 30 Years
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='31',name='age')
+							| 31 - 45 Years
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='46',name='age')
+							| 46 - 59 Years
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='60',name='age')
+							| 60 Years &amp; Above
+				.panel-footer
+					a.btn.btn-labeled.btn-default(role='button')
+						span.btn-label
+							i.fa.fa-arrow-left
+						| Go Back
+					button.next.btn.btn-labeled.btn-success.pull-right(type='button',data-next='issue')
+						| Next
+						span.btn-label.btn-label-right
+							i.fa.fa-arrow-right
+			.panel.panel-default#issue
+				.panel-body.text-center
+					h4 Which of the following best describe a prominent health issue to you?
+					br
+					div.issue(data-toggle='buttons')
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='indigestion',name='issue')
+							| Indigestion
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='migraine',name='issue')
+							| Migraine
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='anxiety',name='issue')
+							| Anxiety Panic Attacks
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='stress',name='issue')
+							| Stress
+				.panel-footer
+					button.btn.btn-labeled.btn-default.back(type='button',data-back='age')
+						span.btn-label
+							i.fa.fa-arrow-left
+						| Go Back
+					button.next.btn.btn-labeled.btn-success.pull-right(type='button',data-next='food')
+						| Next
+						span.btn-label.btn-label-right
+							i.fa.fa-arrow-right
+			.panel.panel-default#food
+				.panel-body.text-center
+					h4 Which of the following foods are most frequently present in your diet?
+					br
+					div.food(data-toggle='buttons')
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='sugar',name='food')
+							| Sugar
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='flour',name='food')
+							| Refined Flour
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='wholegrain',name='food')
+							| Wholegrain
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='oil',name='food')
+							| Vegetable Oil
+				.panel-footer
+					button.btn.btn-labeled.btn-default.back(type='button',data-back='issue')
+						span.btn-label
+							i.fa.fa-arrow-left
+						| Go Back
+					button.next.btn.btn-labeled.btn-success.pull-right(type='button',data-next='share')
+						| Next
+						span.btn-label.btn-label-right
+							i.fa.fa-arrow-right
+			.panel.panel-default#share
+				.panel-body.text-center
+					h4 Which of the following foods takes the largest share of your meals on a regular day?
+					br
+					div.share(data-toggle='buttons')
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='potatoes',name='share')
+							| Potatoes
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='dryfruits',name='share')
+							| Dry Fruits
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='tea',name='share')
+							| Tea &amp; Coffee
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='eggs',name='share')
+							| Eggs
+				.panel-footer
+					button.btn.btn-labeled.btn-default.back(type='button',data-back='food')
+						span.btn-label
+							i.fa.fa-arrow-left
+						| Go Back
+					button.next.btn.btn-labeled.btn-success.pull-right(type='button',data-next='urge')
+						| Next
+						span.btn-label.btn-label-right
+							i.fa.fa-arrow-right
+			.panel.panel-default#urge
+				.panel-body.text-center
+					h4 How frequently are you urged to eat out?
+					br
+					div.urge(data-toggle='buttons')
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value=1,name='urge')
+							| Once a Day
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value=2,name='urge')
+							| Twice a Day
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value=0,name='urge')
+							| Rarely
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value=100,name='urge')
+							| Most of the times
+				.panel-footer
+					button.btn.btn-labeled.btn-default.back(type='button',data-back='share')
+						span.btn-label
+							i.fa.fa-arrow-left
+						| Go Back
+					button.next.btn.btn-labeled.btn-success.pull-right(type='button',data-next='experience')
+						| Next
+						span.btn-label.btn-label-right
+							i.fa.fa-arrow-right
+			.panel.panel-default#experience
+				.panel-body.text-center
+					h4 Which of the following do you experience most often?
+					br
+					div.experience(data-toggle='buttons')
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='emotional',name='experience')
+							| Emotional Pressure
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='mood',name='experience')
+							| Mood Swings
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='irritate',name='experience')
+							| Irritability from environment
+						button.btn.btn-default
+							input.age(type='radio',autocomplete='off',value='social',name='experience')
+							| Social Activity
+				.panel-footer
+					button.btn.btn-labeled.btn-default.back(type='button',data-back='urge')
+						span.btn-label
+							i.fa.fa-arrow-left
+						| Go Back
+					button.next.btn.btn-labeled.btn-success.pull-right(type='button',data-next='result')
+						| Next
+						span.btn-label.btn-label-right
+							i.fa.fa-arrow-right
+			.panel.panel-default#result
+				.panel-body.text-center
+					h3 Your gut score is 
+					.box-clear.center-block
+					.score-50
+						p.lead You're halfway there towards ending your gut despair!
+						p
+							|Your gut needs adequate nourishment in the form of enduring nutrients and fibre-charged foods. Try pairing ground flax seeds with your meals and surviving on celery juice for lunch!
+					.score-30
+						p.lead Your gut hangs in imbalance.
+						p
+							|Let's look at ways you can regain balance. Get rid of foods harmful to your gut's environment. Banish inflammatory foods such as dairy products and welcome garden-reared greens such as cauliflowers and broccolis in your meals.
+				.panel-footer
+					button.btn.btn-labeled.btn-default.back(type='button',data-back='urge')
+						span.btn-label
+							i.fa.fa-arrow-left
+						| Go Back
+					button.next.btn.btn-labeled.btn-success.pull-right(type='button',data-next='result')
+						| Next
+						span.btn-label.btn-label-right
+							i.fa.fa-arrow-right

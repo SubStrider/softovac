@@ -20,15 +20,14 @@ html.no-js(lang='')
     // build:js scripts/vendor/modernizr.js
     script(src='../bower_components/modernizr/modernizr.js')
     // endbuild
-  body
+  body.dark
     <!--[if lt IE 10]>
       p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     <![endif]-->
-    include partials/header
 
     block content
 
-    include partials/footer
+    //- include partials/footer
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.
@@ -59,8 +58,8 @@ html.no-js(lang='')
     script(src='../bower_components/bootstrap/js/scrollspy.js')
     script(src='../bower_components/bootstrap/js/collapse.js')
     script(src='../bower_components/bootstrap/js/tab.js')
-    script(src='../bower_components/jasny-bootstrap/js/offcanvas.js')
     script(src='scripts/gauge.js')
+    script(src='../bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.js')
     script(src='../bower_components/slick-carousel/slick/slick.js')
     // endbuild
 
