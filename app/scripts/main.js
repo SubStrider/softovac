@@ -53,12 +53,12 @@ $(function() {
         autoplay: true,
         fade: true
     }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-        $('.hero').css('background-image', 'url(images/slider/' + nextSlide + '.jpg)');
-        if (nextSlide === 2) {
-            $('.sub').css('color', 'white');
-        } else {
-            $('.sub').css('color', '#222');
-        }
+        $('.hero').css('background-image', 'url(images/slider/' + nextSlide + 'b.jpg)');
+        // if (nextSlide === 2) {
+        //     $('.sub').css('color', 'white');
+        // } else {
+        //     $('.sub').css('color', '#222');
+        // }
     });
 
     $('.testimonial-slider').slick({
@@ -82,28 +82,9 @@ $(function() {
 
     var answers = {};
 
-    $('.age button').click(function() {
-        $('#age .next').attr('disabled', null);
-    });
-
-    $('.issue button').click(function() {
-        $('#issue .next').attr('disabled', null);
-    });
-
-    $('.food button').click(function() {
-        $('#food .next').attr('disabled', null);
-    });
-
-    $('.experience button').click(function() {
-        $('#experience .next').attr('disabled', null);
-    });
-
-    $('.share button').click(function() {
-        $('#share .next').attr('disabled', null);
-    });
-
-    $('.urge button').click(function() {
-        $('#urge .next').attr('disabled', null);
+    $('.age button, .issue button, .food button, .experience button, .share button, .urge button').click(function() {
+        var div = $(this).parent().parent().parent().attr('id');
+        $('#' + div + ' .next').attr('disabled', null);
     });
 
     $('.next').click(function() {
@@ -112,14 +93,13 @@ $(function() {
         answers[current] = $('input[name=\'' + current + '\']:checked').val();
         $('#' + current).hide();
         $('#' + destination).show();
-        console.log(answers);
 
         if (destination === 'result') {
             var results = [30, 50];
             var result = results[Math.floor(Math.random() * results.length)];
             $('#result').find('h3').append(result);
             $('.score-' + result).show();
-            $('.box-clear').append('<div class="gauge-wrap result" data-value="50"></div>');
+            $('.box-clear').append('<div class="gauge-wrap result" data-value="' + result + '"></div>');
             $('.result').simpleGauge();
         }
     });
@@ -127,9 +107,16 @@ $(function() {
     $('.back').click(function() {
         var current = $(this).parent().parent().attr('id');
         var destination = $(this).data('back');
-        answers[current] = $('input[name=\'' + current + '\']:checked').val();
-        $('#' + current).hide();
-        $('#' + destination).show();
+        if (destination === 'reload') {
+            // Reset the object
+            answers = {};
+            $('#result').hide();
+            $('#age').show();
+        } else {
+            answers[current] = $('input[name=\'' + current + '\']:checked').val();
+            $('#' + current).hide();
+            $('#' + destination).show();
+        }
     });
 
 });

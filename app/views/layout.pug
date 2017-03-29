@@ -4,7 +4,12 @@ html.no-js(lang='')
     meta(charset='utf-8')
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title webapp
+    title Softovac - Bowel Regulator
+    meta(property='og:url', content='http://www.your-domain.com/your-page.html')
+    meta(property='og:type', content='website')
+    meta(property='og:title', content='Softovac - Bowel Regulator')
+    meta(property='og:description', content='Softovac is your only solution when the going gets tough')
+    meta(property='og:image', content='http://www.your-domain.com/path/image.jpg')
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
     // Place favicon.ico in the root directory
 
@@ -24,6 +29,8 @@ html.no-js(lang='')
     <!--[if lt IE 10]>
       p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     <![endif]-->
+    include partials/social
+    
     include partials/header
 
     block content

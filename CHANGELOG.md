@@ -4,6 +4,9 @@
 ### Wednesday, 29 March 2017
 - Content and navigation changes as per mail
 - Finished the quiz page and linked it
+- Added new slides and images sent by SoCheers team
+- Added share buttons on result panel
+- Added OG Urls in templates
 
 ### Tuesday, 28 March 2017
 - Added slider using slick.js

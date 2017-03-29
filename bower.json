@@ -6,8 +6,7 @@
     "slick-carousel": "^1.6.0",
     "font-awesome": "fontawesome#^4.7.0",
     "jasny-bootstrap": "^3.1.3",
-    "animate.less": "*",
-    "seiyria-bootstrap-slider": "^9.7.2"
+    "animate.less": "*"
   },
   "overrides": {
     "bootstrap": {
