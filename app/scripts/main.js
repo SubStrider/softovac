@@ -1,7 +1,7 @@
 $(function() {
     'use strict';
 
-    $('.logo-dark').show();
+    // $('.logo-dark').show();
     $('.logo-light').hide();
 
     var currentColor;
@@ -16,7 +16,7 @@ $(function() {
             $('.chameleon-bar').removeClass('scrolled');
             $('.logo-light').show();
             $('.logo-dark').hide();
-            $('.navbar-toggle').css('background-color', '#222');
+            $('.navbar-toggle').css('background-color', 'transparent');
         }
     });
 
@@ -51,14 +51,15 @@ $(function() {
         arrows: false,
         mobileFirst: true,
         autoplay: true,
+        autoplaySpeed: 2500,
         fade: true
     }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
         $('.hero').css('background-image', 'url(images/slider/' + nextSlide + 'b.jpg)');
-        // if (nextSlide === 2) {
-        //     $('.sub').css('color', 'white');
-        // } else {
-        //     $('.sub').css('color', '#222');
-        // }
+        if (nextSlide === 2) {
+            $('.sub').css('color', 'white');
+        } else {
+            $('.sub').css('color', '#222');
+        }
     });
 
     $('.testimonial-slider').slick({
@@ -101,6 +102,15 @@ $(function() {
             $('.score-' + result).show();
             $('.box-clear').append('<div class="gauge-wrap result" data-value="' + result + '"></div>');
             $('.result').simpleGauge();
+            $('[data-image]').attr('content', 'http://placehold.it/300?text=My+gut+health+score+is+' + result);
+            $('[data-description]').attr('content', 'My gut health score is ' + result + '. Use the gut health calculator to find yours');
+
+            var message = 'Hey, I just found my gut score using the gut health calculator. Find yours at ' + window.location.href;
+            var m = encodeURI(message);
+
+            $('.twitter-share-button').attr('href', 'https://twitter.com/intent/tweet?text=' + m);
+            $('.fb-share-button').data('href',window.location.href);
+            $('.whatsapp-button').attr('href', 'whatsapp://send?text=' + m); 
         }
     });
 

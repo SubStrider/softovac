@@ -8,8 +8,8 @@ html.no-js(lang='')
     meta(property='og:url', content='http://www.your-domain.com/your-page.html')
     meta(property='og:type', content='website')
     meta(property='og:title', content='Softovac - Bowel Regulator')
-    meta(property='og:description', content='Softovac is your only solution when the going gets tough')
-    meta(property='og:image', content='http://www.your-domain.com/path/image.jpg')
+    meta(property='og:description', content='Softovac is your only solution when the going gets tough', data-description)
+    meta(property='og:image', content='http://www.your-domain.com/path/image.jpg', data-image)
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
     // Place favicon.ico in the root directory
 
@@ -36,6 +36,24 @@ html.no-js(lang='')
     block content
 
     include partials/footer
+    script.
+      <!--//--><![CDATA[//><!--
+      var images = new Array();
+      function preload(){
+        var host = '//'+window.location.hostname + ':' + window.location.port;
+        for (i = 0; i < preload.arguments.length; i++) {
+          images[i] = new Image();
+          images[i].src = host + preload.arguments[i];
+        }
+      }
+      preload(
+        '/images/slider/0b.jpg',
+        '/images/slider/1b.jpg',
+        '/images/slider/2b.jpg',
+        '/images/slider/3b.jpg',
+        '/images/slider/4b.jpg'
+      )
+      //--><!]]>
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.

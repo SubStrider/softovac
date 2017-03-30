@@ -9,11 +9,10 @@
 
 /** Configuration */
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,600");
+@import url("https://fonts.googleapis.com/css?family=Raleway:900|Roboto:300,700");
 @import "bower_components/jasny-bootstrap/less/jasny-bootstrap.less";
-@import "bower_components/seiyria-bootstrap-slider/src/less/bootstrap-slider.less";
 // @import "bower_components/slick-carousel/slick/slick-theme.less";
-@font-family-sans-serif: "Open Sans",
+@font-family-sans-serif: "Roboto",
 Helvetica,
 Arial,
 sans-serif;
@@ -38,11 +37,11 @@ monospace;
 @font-size-h6: ceil((@font-size-base * 0.85)); // ~12px
 @line-height-base: 1.428571429; // 20/14
 @line-height-computed: floor((@font-size-base * @line-height-base)); // ~20px
-@headings-font-family: "Montserrat",
+@headings-font-family: "Raleway",
 Helvetica,
 Arial,
 sans-serif;
-@headings-font-weight: 700;
+@headings-font-weight: 900;
 @headings-line-height: 1.1;
 @headings-color: #7aa65d;
 @tatti-yellow: #eccd63;
@@ -128,6 +127,7 @@ a {
     }
     h2 {
         color: #333;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
         margin-bottom: 16px;
         text-align: center;
         @media only screen and (min-width: @screen-sm-min) {
@@ -253,6 +253,7 @@ a {
     .slick-dots {
         margin: 12px auto;
         text-align: center;
+        color:black;
     }
     .lead {
         &:before {
@@ -580,6 +581,19 @@ a.social-link {
         zoom:1.2;
         margin-left: 4px;
         vertical-align: top!important;
+    }
+    a.whatsapp-button{
+        padding: 4px;
+        background: #25d366;
+        color: white;
+        font-weight: bold;
+        text-shadow:0 1px 5px rgba(0, 0, 0, 0.15);
+        border:1px solid darken(#25d366, 10%);
+        vertical-align: top;
+        margin-left: 8px;
+        i{
+            margin-right: 4px;
+        }
     }
 }
 .panel-footer{
