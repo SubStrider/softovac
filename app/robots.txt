@@ -1,4 +1,16 @@
 # robotstxt.org/
 
-User-agent: * 
-Disallow:
+User-agent: googlebot 
+Disallow: *
+
+Allow: /images
+
+User-agent: Twitterbot
+Disallow: *
+
+Allow: /images
+
+User-agent: Facebot
+Disallow: *
+
+Allow: /images

@@ -63,7 +63,8 @@ body {
     padding-bottom: 20px;
     &.dark {
         padding-top: 24px;
-        background-color: #222;
+        background: #222 url(../images/q1.gif) repeat;
+        background-size: 75px;
     }
 }
 
@@ -253,7 +254,16 @@ a {
     .slick-dots {
         margin: 12px auto;
         text-align: center;
-        color:black;
+        li {
+            button:before{
+                color:#222;
+            }
+            &.slick-active{
+                button:before{
+                    color:#222;
+                }
+            }
+        }
     }
     .lead {
         &:before {
